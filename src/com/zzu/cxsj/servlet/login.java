@@ -16,6 +16,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.zzu.cxsj.dbutils.*;
+import com.zzu.cxsj.Dao.StudentDao;
 import com.zzu.cxsj.dbBean.*;
 
 /**
@@ -34,10 +35,25 @@ public class login extends HttpServlet {
 		//验证用户信息，，并将userid写入request的session中
 		String userid = request.getParameter("userid");
 		String usertype = request.getParameter("usertype");
+		String password = request.getParameter("password");
 		request.getSession().setAttribute("usertype", usertype);//student/tesacher
 		request.getSession().setAttribute("userid", userid);
 		request.getSession().setAttribute("username", "wlk");
+		
 		Session session = DBConnection.getFactory().openSession();
+		String hql = "from DBStudent where userid=:userid and password=:password";
+		Query<DBStudent> query = session.createQuery(hql);
+		query.setString("userid", userid);
+		query.setString("password", password);
+		List<DBStudent> stus = query.list();
+		for(DBStudent stu:stus){
+			System.out.println("************");
+			System.out.println(stu.getUserid());
+			System.out.println(stu.getName());
+			System.out.println(stu.getYuanxi());
+			System.out.println(stu.getZhuanye());
+			System.out.println(stu.getClass());
+		}
 		
 		
 		if(usertype.equals("student"))

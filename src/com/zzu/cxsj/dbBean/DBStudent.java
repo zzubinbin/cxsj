@@ -6,10 +6,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "stu")
+@Table(name = "student")
 public class DBStudent {
 	@Id
-	private String id;
+	private String userid;
 	@Column
 	private String name;
 	@Column
@@ -18,13 +18,15 @@ public class DBStudent {
 	private String yuanxi;
 	@Column
 	private String zhuanye;
-	public String getId() {
-		return id;
+	@Column
+	private String cclass;
+	
+	public String getUserid() {
+		return userid;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
-
 	public String getName() {
 		return name;
 	}
