@@ -45,6 +45,7 @@ public class login extends HttpServlet {
 		Query<DBStudent> query = session.createQuery(hql);
 		query.setString("userid", userid);
 		query.setString("password", password);
+		
 		List<DBStudent> stus = query.list();
 		for(DBStudent stu:stus){
 			System.out.println("************");
