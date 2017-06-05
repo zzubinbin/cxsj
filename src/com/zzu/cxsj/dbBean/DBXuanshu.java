@@ -9,37 +9,37 @@ import javax.persistence.Table;
 @Table(name = "xuanshu")
 public class DBXuanshu {
 	@Id
-	public int id;
+	public int xuanshuid;
 	@Column
-	public String yuanxi;
+	public int teacherid;
 	@Column
-	public String zhuanye;
+	public int courseid;
 	@Column
-	public String isbn;
-	public int getId() {
-		return id;
+	public String bookisbns;
+	public int getXuanshuid() {
+		return xuanshuid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setXuanshuid(int xuanshuid) {
+		this.xuanshuid = xuanshuid;
 	}
-	public String getYuanxi() {
-		return yuanxi;
+	public int getTeacherid() {
+		return teacherid;
 	}
-	public void setYuanxi(String yuanxi) {
-		this.yuanxi = yuanxi;
+	public void setTeacherid(int teacherid) {
+		this.teacherid = teacherid;
 	}
-	public String getZhuanye() {
-		return zhuanye;
+	public int getCourseid() {
+		return courseid;
 	}
-	public void setZhuanye(String zhuanye) {
-		this.zhuanye = zhuanye;
+	public void setCourseid(int courseid) {
+		this.courseid = courseid;
 	}
-	public String getIsbn() {
-		return isbn;
+	public String getBookisbns() {
+		return bookisbns;
 	}
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+	public void setBookisbns(String bookisbns) {
+		this.bookisbns = bookisbns;
 	}
-
+	
 	
 }
