@@ -1,5 +1,6 @@
 package com.zzu.cxsj.dbBean;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -7,6 +8,7 @@ import javax.persistence.Table;
 @Table(name = "adress")
 public class DBAddress {
 	@Id
+	public int addressid;
 	@Column
 	public String addresstype;
 	@Column
