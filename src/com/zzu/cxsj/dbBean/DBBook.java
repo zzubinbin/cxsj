@@ -14,7 +14,11 @@ public class DBBook {
 	@Id
 	public String isbn;
 	@Column
-	public String name;
+	public String bookname;
+	@Column
+	public String author;
+	@Column
+	public String edition;
 	@Column
 	public Float price;
 	@Column
@@ -23,19 +27,35 @@ public class DBBook {
 	public String describe;
 	@Column
 	public String classifycode;
-	
-	
+	@Column
+	public String pubtime;
+	@Column
+	public String publisher;
+	@Column
+	public String commentid;
 	public String getIsbn() {
 		return isbn;
 	}
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
-	public String getName() {
-		return name;
+	public String getBookname() {
+		return bookname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setBookname(String bookname) {
+		this.bookname = bookname;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getEdition() {
+		return edition;
+	}
+	public void setEdition(String edition) {
+		this.edition = edition;
 	}
 	public Float getPrice() {
 		return price;
@@ -61,6 +81,25 @@ public class DBBook {
 	public void setClassifycode(String classifycode) {
 		this.classifycode = classifycode;
 	}
-		
+	public String getPubtime() {
+		return pubtime;
+	}
+	public void setPubtime(String pubtime) {
+		this.pubtime = pubtime;
+	}
+	public String getPublisher() {
+		return publisher;
+	}
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+	public String getCommentid() {
+		return commentid;
+	}
+	public void setCommentid(String commentid) {
+		this.commentid = commentid;
+	}
+	
+	
 
 }
