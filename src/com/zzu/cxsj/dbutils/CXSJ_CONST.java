@@ -11,7 +11,5 @@ public class CXSJ_CONST {
 	public static int ORDER_STATUS_DELIVERY=3;
 	public static int ORDER_STATUS_ONTHEWAY=4;
 	public static int ORDER_STATUS_DONE=5;
-	
-	
 
 }
