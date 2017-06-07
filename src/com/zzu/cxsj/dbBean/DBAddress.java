@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "adress")
+@Table(name = "m_address")
 public class DBAddress {
 	@Id
 	public int addressid;

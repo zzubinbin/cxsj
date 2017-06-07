@@ -1,4 +1,6 @@
 package com.zzu.cxsj.dbBean;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,45 +9,45 @@ import javax.persistence.Table;
 import com.alibaba.fastjson.JSONObject;
 
 @Entity
-@Table(name = "order")
+@Table(name = "m_order")
 public class DBOrder {
 	@Id
-	public int orderid;
+	public String orderid;
 	@Column
-	public String buyer;
+	public String buyerid;
 	@Column
 	public String bookisbn;
 	@Column
-	public Float quantity;
+	public int quantity;
 	@Column
 	public Float price;
 	@Column
 	public Float amount;
 	@Column
-	public String createtime;
+	public Date createtime;
 	@Column
-	public String paytime;
+	public Date paytime;
 	@Column
-	public String finishtime;
+	public Date finishtime;
 	@Column
 	public String comment;
 	@Column
-	public String distributionty;
+	public int distributiontype;
 	@Column
-	public int addressid;
+	public String addressid;
 	@Column
-	public String status;
-	public int getOrderid() {
+	public int status;
+	public String getOrderid() {
 		return orderid;
 	}
-	public void setOrderid(int orderid) {
+	public void setOrderid(String orderid) {
 		this.orderid = orderid;
 	}
-	public String getBuyer() {
-		return buyer;
+	public String getBuyerid() {
+		return buyerid;
 	}
-	public void setBuyer(String buyer) {
-		this.buyer = buyer;
+	public void setBuyerid(String buyerid) {
+		this.buyerid = buyerid;
 	}
 	public String getBookisbn() {
 		return bookisbn;
@@ -53,10 +55,10 @@ public class DBOrder {
 	public void setBookisbn(String bookisbn) {
 		this.bookisbn = bookisbn;
 	}
-	public Float getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(Float quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	public Float getPrice() {
@@ -71,22 +73,22 @@ public class DBOrder {
 	public void setAmount(Float amount) {
 		this.amount = amount;
 	}
-	public String getCreatetime() {
+	public Date getCreatetime() {
 		return createtime;
 	}
-	public void setCreatetime(String createtime) {
+	public void setCreatetime(Date createtime) {
 		this.createtime = createtime;
 	}
-	public String getPaytime() {
+	public Date getPaytime() {
 		return paytime;
 	}
-	public void setPaytime(String paytime) {
+	public void setPaytime(Date paytime) {
 		this.paytime = paytime;
 	}
-	public String getFinishtime() {
+	public Date getFinishtime() {
 		return finishtime;
 	}
-	public void setFinishtime(String finishtime) {
+	public void setFinishtime(Date finishtime) {
 		this.finishtime = finishtime;
 	}
 	public String getComment() {
@@ -95,23 +97,23 @@ public class DBOrder {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
-	public String getDistributionty() {
-		return distributionty;
+	public int getDistributiontype() {
+		return distributiontype;
 	}
-	public void setDistributionty(String distributionty) {
-		this.distributionty = distributionty;
+	public void setDistributiontype(int distributiontype) {
+		this.distributiontype = distributiontype;
 	}
-	public int getAddressid() {
+	public String getAddressid() {
 		return addressid;
 	}
-	public void setAddressid(int addressid) {
+	public void setAddressid(String addressid) {
 		this.addressid = addressid;
 	}
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
-	}
+	}	
 	
 }

@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import com.alibaba.fastjson.JSONObject;
 
 @Entity
-@Table(name = "comment")
+@Table(name = "m_comment")
 public class DBComment {
 	@Id
 	public String bookisbn;

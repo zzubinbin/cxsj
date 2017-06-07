@@ -61,6 +61,15 @@ public class xuanshu extends HttpServlet {
 			 * 		教师id：userid
 			 * 		课程号：courseid
 			 * 		json格式的教材isbn码：books
+			 * 		{
+			 			"isbns":[
+			 			"第一个isbn码",
+			 			"第二个isbn码",
+			 			"第三个isbn码",
+			 			"第四个isbn码"
+			 			。。。。。。
+			 			]
+					}
 			 * 
 			 * 功能要求：
 			 * 		根据教师号userid和课程号courseid，确定这个教师的此门课程所选的教材，

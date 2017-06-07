@@ -22,7 +22,7 @@ import com.zzu.cxsj.dbBean.*;
 /**
  * Servlet implementation class login
  */
-@WebServlet(urlPatterns="/login")
+@WebServlet("/login")
 public class login extends HttpServlet {
 	private static final long serialVersionUID = 3192589044176123852L;
 	
@@ -55,7 +55,6 @@ public class login extends HttpServlet {
 			System.out.println(stu.getZhuanye());
 			System.out.println(stu.getClass());
 		}
-		
 		
 		if(usertype.equals("student"))
 			request.getRequestDispatcher("/jsp/welcomeStu.jsp").forward(request, response);

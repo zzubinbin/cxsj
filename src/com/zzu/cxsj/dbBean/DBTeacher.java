@@ -1,8 +1,12 @@
 package com.zzu.cxsj.dbBean;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "m_teacher")
 public class DBTeacher {
 	@Id
 	private int userid;

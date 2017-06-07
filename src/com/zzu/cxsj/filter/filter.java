@@ -9,6 +9,9 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -39,9 +42,20 @@ public class filter implements Filter {
 		
 		// place your code here
 				
-		// pass the request along the filter chain
 		System.out.println("filter a request!!!");
-		chain.doFilter(request, response);
+		// pass the request along the filter chain
+		HttpServletRequest httpRequest = (HttpServletRequest) request;
+		HttpServletResponse httpresponse = (HttpServletResponse) response;
+		HttpSession session = httpRequest.getSession();
+		String userid = (String) session.getAttribute("userid");
+		System.out.println(userid);
+		System.out.println();
+		if(httpRequest.getRequestURI().contains("login"))
+			chain.doFilter(request, response);
+		else if(userid==null||userid.equals(""))
+			httpresponse.sendRedirect("./index.html");
+		else 
+			chain.doFilter(request, response);
 	}
 
 	/**

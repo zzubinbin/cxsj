@@ -1,5 +1,7 @@
 package com.zzu.cxsj.dbBean;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,32 +10,34 @@ import javax.persistence.Table;
 import com.alibaba.fastjson.JSONObject;
 
 @Entity
-@Table(name = "xuanshu")
-public class DBXuanke {
+@Table(name = "m_xuanke")
+public class DBXuanke implements Serializable{
+	@Id	
+	private String stuid;
 	@Id
-	private int courseid;
+	private String teacherid;
 	@Column
-	private int teacherid;
-	@Column
-	private int stuid;
+	private String courseid;
 	
-	public int getCourseid() {
-		return courseid;
-	}
-	public void setCourseid(int courseid) {
-		this.courseid = courseid;
-	}
-	public int getTeacherid() {
-		return teacherid;
-	}
-	public void setTeacherid(int teacherid) {
-		this.teacherid = teacherid;
-	}
-	public int getStuid() {
+	
+	public String getStuid() {
 		return stuid;
 	}
-	public void setStuid(int stuid) {
+	public void setStuid(String stuid) {
 		this.stuid = stuid;
 	}
+	public String getTeacherid() {
+		return teacherid;
+	}
+	public void setTeacherid(String teacherid) {
+		this.teacherid = teacherid;
+	}
+	public String getCourseid() {
+		return courseid;
+	}
+	public void setCourseid(String courseid) {
+		this.courseid = courseid;
+	}
 	
+
 }

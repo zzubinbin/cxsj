@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import com.alibaba.fastjson.JSONObject;
 
 @Entity
-@Table(name = "course")
+@Table(name = "m_course")
 public class DBCourse {
 
 	@Id

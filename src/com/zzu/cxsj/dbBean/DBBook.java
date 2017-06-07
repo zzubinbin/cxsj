@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import com.alibaba.fastjson.JSONObject;
 
 @Entity
-@Table(name = "book")
+@Table(name = "m_book")
 public class DBBook {
 	@Id
 	public String isbn;
