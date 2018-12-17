@@ -1,2 +1,2 @@
-document.write("hello,world");
-$(callback)
+document.write("hello,world")
+setTimeout(function(),1000)
